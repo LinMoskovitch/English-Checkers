@@ -175,9 +175,13 @@ namespace WinFormsUI
             {
                 chooseSourceCell(chosenCell, chosenUICell);
             }
+            else if (m_CurrentMoveSource == null)
+            {
+                MessageBox.Show("There isn't pawn with valid moves in this cell", "Invalid move!");
+            }
             else
             {
-                MessageBox.Show("Invalid move!");
+                MessageBox.Show("The chosen pawn can't move to this cell", "Invalid move!");
             }
         }
 
